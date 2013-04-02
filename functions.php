@@ -1065,7 +1065,7 @@ function facebook_preview_stuff()
 		$the_excerpt = strip_tags(get_the_excerpt());
 	endwhile;
 	wp_reset_query();
-	foreach ($img_urls as $a_img_url) echo "<link rel=\"image_src\" href=\"$a_img_url\" />";
+	if($img_urls) foreach ($img_urls as $a_img_url) echo "<link rel=\"image_src\" href=\"$a_img_url\" />";
 	
 	echo "<meta property=\"fb:admins\" content=\"\"/>		
 	<meta property=\"og:title\" content=\"$title\"/>
